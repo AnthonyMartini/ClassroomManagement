@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Navbar from "./components/Navbar";
 import Grades from "./pages/Grades";
 import GradeDetails from "./pages/GradeDetails";
 import StudentInfo from "./pages/StudentInfo";
@@ -12,7 +11,6 @@ function App() {
     <Router>
       <div>
         <Header />
-        <Navbar />
         <Routes>
           <Route path="/" element={<Grades />} />
           <Route path="/grades" element={<Grades />} />
