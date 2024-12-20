@@ -10,7 +10,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 
-export default function HeaderWithDrawer() {
+export default function HeaderWithDrawer({ loggedIn, setIsLoggedIn }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const navigate = useNavigate(); // Initialize navigation
 
@@ -23,6 +23,10 @@ export default function HeaderWithDrawer() {
       return;
     }
     setDrawerOpen(open);
+  };
+  const signout = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
   };
 
   // Define navigation routes for the drawer items
@@ -57,8 +61,15 @@ export default function HeaderWithDrawer() {
             Three Rivers Local Schools
           </h1>
 
-          {/* Right Button */}
-          <Button color="inherit">Login</Button>
+          {loggedIn ? (
+            <Button color="inherit" onClick={signout}>
+              Sign Out
+            </Button>
+          ) : (
+            <Button color="inherit" onClick={() => navigate("/")}>
+              Login
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
 

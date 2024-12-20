@@ -28,7 +28,7 @@ function Grades() {
   return (
     <div className="flex flex-col gap-4 pt-4 items-center">
       <h1 className="font-bold text-[20px]">Upcoming Assignments</h1>
-      <div className="w-full sm:w-[800px] flex flex-col gap-4 p-4 text-left">
+      <div className="w-full sm:w-[800px] flex flex-col gap-4 p-4 text-left bg-[#fafafa] rounded-lg shadow-lg">
         {/* Table Headers */}
         <div className="flex justify-between font-bold border-b-2 pb-2 mx-2">
           <div className="w-1/3">Assignment Name</div>
@@ -40,7 +40,7 @@ function Grades() {
         {assignments.map((assignment) => (
           <div
             key={assignment.id}
-            className="flex justify-between items-center p-2 shadow-md hover:bg-gray-200 transition-all"
+            className="flex justify-between items-center p-2 shadow-md hover:bg-gray-200 transition-all border-1 rounded-md"
           >
             <div className="w-1/3">{assignment.name}</div>
             <div className="w-1/3">{assignment.subject}</div>

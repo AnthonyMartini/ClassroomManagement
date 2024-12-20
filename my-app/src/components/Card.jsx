@@ -19,7 +19,12 @@ export default function ActionCard({ title, teacher, imgSrc }) {
     >
       <CardActionArea>
         {imgSrc ? (
-          <CardMedia sx={{ height: 140 }} image={imgSrc} title="class media" />
+          <CardMedia
+            className="border-b-2"
+            sx={{ height: 140 }}
+            image={imgSrc}
+            title="class media"
+          />
         ) : (
           <div
             style={{

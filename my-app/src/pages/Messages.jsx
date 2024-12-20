@@ -5,7 +5,7 @@ function Grades() {
 
   return (
     <div className="flex flex-col gap-2 pt-4">
-      <h1 className="font-bold">Messages</h1>
+      <h1 className="font-bold text-[20px]">Messages</h1>
     </div>
   );
 }

@@ -49,7 +49,7 @@ function ReportCard() {
       <h1 className="font-bold text-[20px]">Report Card</h1>
 
       {/* Table displaying grades for selected academic year */}
-      <div className="w-full sm:w-[800px] flex flex-col gap-4 p-4 mt-4">
+      <div className="w-full sm:w-[800px] flex flex-col gap-4 p-4 mt-4 bg-[#fafafa] rounded-lg shadow-lg">
         {/* Dropdown for selecting academic year */}
         <FormControl className="w-[150px]">
           <InputLabel color={"secondary"}>Academic Year</InputLabel>

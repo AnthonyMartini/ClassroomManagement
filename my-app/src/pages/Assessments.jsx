@@ -16,25 +16,25 @@ function Assessments() {
   ];
 
   return (
-    <div className="flex flex-col gap-4 pt-4 items-center">
-      <h1 className="font-bold">Assessment Results</h1>
-      <div className="w-full sm:w-[800px] flex flex-col gap-4 p-4">
+    <div className="flex flex-col gap-4 pt-4 items-center text-left">
+      <h1 className="font-bold text-[20px]">Assessment Results</h1>
+      <div className="w-full sm:w-[800px] flex flex-col gap-4 p-4 text-left bg-[#fafafa] rounded-lg shadow-lg">
         {/* Table Headers */}
-        <div className="flex justify-between font-bold border-b-2 pb-2">
+        <div className="flex justify-between font-bold border-b-2 pb-2 px-2">
           <div className="w-1/3">Assessment Name</div>
-          <div className="w-1/3">Date Taken</div>
-          <div className="w-[100px]">Score</div>
+          <div className="w-1/3">Score</div>
+          <div className="w-[100px]">Date Taken</div>
         </div>
 
         {/* Assessments List */}
         {assessments.map((assessment) => (
           <div
             key={assessment.id}
-            className="flex justify-between items-center p-2 shadow-md hover:bg-gray-200 transition-all"
+            className="flex justify-between items-center p-2 shadow-md hover:bg-gray-200 transition-all border-1 rounded-md"
           >
             <div className="w-1/3">{assessment.name}</div>
-            <div className="w-1/3">{assessment.dateTaken}</div>
-            <div className="w-[100px]">{assessment.score}</div>
+            <div className="w-1/3">{assessment.score}</div>
+            <div className="w-[100px]">{assessment.dateTaken}</div>
           </div>
         ))}
       </div>
