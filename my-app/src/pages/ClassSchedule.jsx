@@ -1,12 +1,4 @@
 import React from "react";
-import {
-  Box,
-  Paper,
-  List,
-  ListItem,
-  ListItemText,
-  Divider,
-} from "@mui/material";
 
 const HighSchoolClassSchedulePage = ({ classData }) => {
   // Mock data for the high school class schedule
